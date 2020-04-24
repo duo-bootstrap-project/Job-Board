@@ -380,7 +380,7 @@ margin-top: 80px;
 /*alljobs end*/
 
 /*testimonials start*/
-
+/*contact */
 #testimonials
 {
     padding-top: 40px;
@@ -430,3 +430,81 @@ margin-top: 80px;
 /*testimonials end*/
 
 /*content end*/
+/*contact start*/
+
+#contact
+{
+    background-color: #252F31;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    overflow: hidden;
+    font-family: Alegreya;
+}
+
+#contact .container .info
+{
+    width: 50%;
+    margin-right: 5%;
+    float: left;
+}
+
+#contact .container .info h2
+{
+    color: #FFF;
+    margin-left: 40px;
+}
+
+#contact .container .info p
+{
+    color: #5B6063;
+    margin-left: 40px;
+}
+
+#contact .container .info p strong {color: #D1D6DA;}
+
+#contact .container .form 
+{
+    float: left;
+    width: 45%;
+}
+
+#contact .container .form label
+{
+    display: block;
+    color: #D1D6DA;
+    margin: 10px 0;
+}
+
+
+
+#contact .container .form input[type="text"]
+{
+    background-color: #4B5557;
+    color: #FFF;
+    padding: 10px;
+    border: 0;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+#contact .container .form textarea
+{
+    background-color: #4B5557;
+    color: #FFF;
+    padding: 10px;
+    border: 0;
+    width: 80%;
+    margin-bottom: 10px;
+    height: 300px;
+}
+
+#contact .container .form input[type="submit"]
+{
+    background-color: #191E22;
+    color: #FFF;
+    padding: 10px 20px;
+    border: 0;
+    margin-top:10px;
+    border-radius: 7px;
+}
+/*contact end */
