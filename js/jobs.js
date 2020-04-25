@@ -1,52 +1,58 @@
-var profile = JSON.parse(localStorage.getItem("profile"))
+var user = JSON.parse(localStorage.getItem("ThisUser"))
+//one user jobs 
 
-function renderJobs(jobs, filter) {
-	if(jobs === null)
-		jobs = [];
-	var filterJob = $.grep(jobs, function(obj){
-		return obj.jobTitle.toLowerCase().includes(filter.searchText.toLowerCase())
-	})
-	$('#jobs').empty();
-	$('#jobsarea').empty();
-	$.each(filterJob, function(index, value) {
-		var title = $("<h3>" + value.jobTitle + "<h3>")
-		title.attr('class', 'job-titles')
-		var parg = $("<p>" + value.jobDescrib + "</p>")
-		parg.attr('class', 'job-descriptions')
-		var salary = $("<p>Working hours per week" + value.salary + "</p>");
-		workinghours.attr("class", "work-hours");
-		var date = $("<p>" + value.date + "</p>");
-		date.attr("class", "date-posted");
-		var container = $("<div></div>")
-		container.attr("class, job-container")
-		container.append(title)
-		container.append(parg)
-		$('#jobs').append(container)
-		container.append(workinghours)
-		container.append(date);
-		$('#jobsarea').append(container)
-	})
-}
-
-var jobs = JSON.parse(localStorage.getItem("jobs"));
-var filter = {
-	searchText: ""
-}
-renderJobs(jobs, filter)
-$("#search-job").on('input', function(event){
-	filter.searchText = $(this).val();
-	renderJobs(jobs, filter)
-})
-$('#submit-job').on("click", function(){
-	if(jobs === null)
-		jobs = [];
+renderUserjobs(user.jobsPosted)
+var users = JSON.parse(localStorage.getItem("users"))
+$("#job-btn").click(function() {
 	var date = new Date;
-	jobs.push({
+	var newjob = {
 		id: uuidv4(),
-		jobTitle: $('#job-title').val(),
-		jobDescrib: $('#job-describ').val(),
-		salary: $("#job-salary").val(),
+		jobTitle: $('#job-name-input').val(),
+		jobDescrib: $('#job-about-input').val(),
+		salary: $("#job-salary-input").val(),
 		date: date.getDate() + " / " + (date.getMonth() + 1 )+ " / " +date.getFullYear()
-	})
-	localStorage.setItem("jobs", JSON.stringify(jobs))
+		
+}
+	user.jobsPosted.push(newjob)
+var jobsArray = JSON.parse(localStorage.getItem("alljobs"));
+if(jobsArray === null)
+	jobsArray = [];
+jobsArray.push(newjob)
+localStorage.setItem("alljobs", JSON.stringify(jobsArray))
+
+localStorage.setItem("ThisUser", JSON.stringify(user))
+updateUser(user);
+renderUserjobs(user.jobsPosted)	
+		$(".job-form-container").dialog("close")
+
 })
+function updateUser(user){
+	for(var i = 0; i < users.length; i++){
+		if(users[i].id === user.id)
+			users[i] = user;
+	}
+	localStorage.setItem("users", JSON.stringify(users))
+}
+
+function renderUserjobs(jobsArray){
+	$("#user-posted-jobs").html("");
+	for(var i = 0; i < jobsArray.length; i++) {
+		var container = $("<div></div>")
+		container.attr("class", "everyjobcontainer")
+		var title = $("<h3>" + jobsArray[i].jobTitle + "</h3>")
+		title.attr("class", "job-titles")
+		var descrip = $("<p>" + jobsArray[i].jobDescrib + "</p>")
+		descrip.attr("class", "job-descriptions")
+		var salary = $("<p>" + jobsArray[i].salary + "</p>")
+		salary.attr("class", "job-salaries")
+		var date = $("<p>" + jobsArray[i].date + "</p>")
+		date.attr("class", "job-dates")
+		container.append(title)
+		container.append(salary)
+		container.append(descrip)
+		container.append(date)
+		$("#user-posted-jobs").prepend(container)
+	}
+
+}
+

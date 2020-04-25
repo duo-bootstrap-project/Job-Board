@@ -9,7 +9,7 @@ $("#signin-btn").click(function() {
 		for(var i = 0; i < users.length; i++) {
 			if(users[i].username === $("#user-name-signin").val() || users[i].email === $("#user-name-signin").val()){
 				if(users[i].password === $("#password-signin").val()){
-					localStorage.setItem("ThisUser", JSON.stringify([users[i]]))
+					localStorage.setItem("ThisUser", JSON.stringify(users[i]))
 					check = true;
 				}
 			}
@@ -53,9 +53,12 @@ $("#signup-btn").click(function() {
 				}
 				users.push(user);
 				localStorage.setItem("users", JSON.stringify(users));
-				localStorage.setItem("ThisUser", JSON.stringify([user]));
+				localStorage.setItem("ThisUser", JSON.stringify(user));
 				window.location.href = "userinterface.html";}
 			}
 })
 
 
+$(".logout").click(function () {
+localStorage.setItem("ThisUser", JSON.stringify(""));
+})

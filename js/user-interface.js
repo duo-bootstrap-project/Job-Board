@@ -20,15 +20,3 @@ $.each(user.jobsPosted, function (index, value) {
 		$(".user-jobsarea").append(container)
 })
 }
-
-
-// function appendInformation() {
-// 	var user =  JSON.parse(localStorage.getItem("ThisUser"))[0]
-// 	$(".user-logo").attr("src", user.img)
-// 	$(".user-title").text(user.companyName)
-// 	$(".user-about").text(user.companydescription)
-// 	$(".user-services").text(user.services)
-// 	$(".user-change-phone").text(user.phoneNumber);
-// 	$(".user-change-address").text(user.address)
-
-// }

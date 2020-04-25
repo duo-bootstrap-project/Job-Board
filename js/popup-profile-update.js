@@ -10,9 +10,10 @@ function opendialog(){
 		return false;
 })}
 
-	opendialog();
-var user =  JSON.parse(localStorage.getItem("ThisUser"))[0]
+opendialog();
+var user =  JSON.parse(localStorage.getItem("ThisUser"))
 var users = JSON.parse(localStorage.getItem("users"))
+appendInformation()
 
 $("#user-logo-input").change(function() {
     if (this.files && this.files[0]) {
@@ -41,7 +42,7 @@ $("#info-btn").click(function() {
 		user.address = address;
 		user.phoneNumber = phone;
 		user.services = services;
-		localStorage.setItem("ThisUser", JSON.stringify([user]))	
+		localStorage.setItem("ThisUser", JSON.stringify(user))	
 		updateUser(user)
 		appendInformation();
 		$(".info-form-container").dialog("close")
