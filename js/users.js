@@ -46,6 +46,7 @@ $("#signup-btn").click(function() {
 					img: "",
 					companyName : "",
 					companydescription: "",
+					services: "",
 					jobsPosted:[],
 					phoneNumber: "",
 					address: ""

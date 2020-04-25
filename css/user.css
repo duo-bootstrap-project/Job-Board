@@ -36,6 +36,8 @@
 
 /*header start*/
 
+/*header start*/
+
 #header .navbar
 {
     background-color: #252F31;
@@ -83,11 +85,11 @@
 #header .navbar .container .leftpart .logo img
 {  
     float: left;
-    margin-top: 10px;
+    margin-top: 7px;
 }
 #header .navbar .container .leftpart .logo h2
 {  
-    margin: 14px 0 0 7px;
+    margin: 25px 0 0 7px;
     float: right;
     font-weight: bold;
     font-size: 25px;   
@@ -140,7 +142,7 @@
 {
     float: right;
 
-    padding-top:10px;
+    padding-top:4px;
 
     margin-top: 3px;
 }
@@ -159,9 +161,7 @@
     padding: 10px 20px;
     background-color: #F1C300;
     border: 1px solid white;
-    border-radius: 7px;
-    padding: 10px 20px;
-    
+    border-radius: 7px; 
 }
 
 #header .navbar .container .rightpart ul li a:hover
@@ -169,18 +169,25 @@
    color: black;
 }
 
-#header .navbar .container .rightpart ul .login
-{
-    margin-right: 25px;
-}
 
-#header .navbar .container .rightpart ul .register
-{
-    margin-left: 3px;
-}
+
+/*navbar right part end*/
 
 body {
 	background-color: #EAEDED ;
+
+}
+
+body::after {
+  content: "";
+  background: url('https://www.cmacgm-group.com/api//sites/default/files/2018-11/talent_findyourdreamjob_1920.jpg');;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
 }
 /* welcome bar */
 .content h2 {
@@ -191,7 +198,7 @@ body {
 	background-color: #F1C300;
 	padding: 20px 50px;
 	border-radius: 10px;
-	margin: 10px 0px 25px 0px;
+	margin: 1px 0px 15px 0px;
 	font-size: 36px;
 	font-family: montserrat_subrayadabold;
 	line-height: 50px;
@@ -212,18 +219,20 @@ body {
     color: #D35400;
     background-color: #F9E79F;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 28px;
     width: 100%;
     height: 60px;
     line-height: 60px;
     text-align: center; 
     margin-bottom: 20px;
+    font-family: Alegreya;
+
 }
 .user-input-label{
     float: left;
     width: 200px;
     text-align: center;
-    padding: 10px 7px;
+    padding: 12px 7px;
     margin: 10px 30px 15px 50px;
     clear: left;
     background-color: #F9E79F;
@@ -231,15 +240,19 @@ body {
     border-radius: 15px;
     border-color: lightgrey;
     font-weight: bold;
+    font-size: 18px;
     color: #D35400;
+    font-family: Alegreya;
+
 }
 
-#about-label{
-    margin-top: 55px;
+#about-label, #services-label{
+    margin-top: 30px;
+    padding: 40px 7px;
 }
 
 #user-name-input,#user-logo-input, #user-about-input, #user-address-input,
-#user-phone-input {
+#user-phone-input, #user-services-input{
     margin: 15px 15px 30px 50px;
     width: 250px;
     line-height: 25px;
@@ -260,6 +273,9 @@ input:focus {
     letter-spacing: 1px;
     cursor: pointer;
     margin-bottom: 30px;
+    font-size: 22px;
+    font-family: Alegreya;
+
 }
 
 #info-btn{
@@ -267,6 +283,8 @@ input:focus {
     margin-bottom: 0px;
     color: #D35400;
     background-color: #F9E79F;
+    font-family: Alegreya;
+
 }
 
 #info-update-btn {
@@ -276,7 +294,8 @@ input:focus {
     border-style: solid;
     border-radius: 15px;
     border-color: lightgrey;
-
+    font-family: Alegreya;
+    margin-bottom: 0px;
 
 }
 
@@ -286,20 +305,41 @@ input:focus {
 .user-page-content-container {
 	width: 40%
 }
-
-.user-logo-title{
-	display: flex;
+.user-information{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 25%;
 }
+
+
 .user-title{
-	width: 50%;
-	 font-weight: bold;
+	width: 100%;
+	font-weight: bolder;
     font-size: 22px;
-    width: 100%;
-    line-height: 50px;
-    margin-left: 15px;
+    line-height: 40px;
+    font-family: Montserrat;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: left;
+    margin-left: 6%;
+
 }
 .user-logo{
-	height: 20%;
+	height: auto;
+    margin-left: 60px;
+    margin-top: 0px;
 	width: 30%;
-	margin-left: 15px;
+    border-radius: 50%;
+    border-style: solid;
+}
+
+.inner-user-content{
+    border-style: solid;
+    border-radius: 10px;
+    border-color: lightgrey;
+    margin-left: 15px;
+    margin-right: 100px;
+    background-color: #F9E79F;
+    padding: 10px 15px;
 }
