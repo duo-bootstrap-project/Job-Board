@@ -2,10 +2,12 @@
 <html>
 <head>
 	<title>User Interface</title>
+ <link href='https://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet'>
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
 	 <link rel="stylesheet" href="css/normalize.css">
      <link rel="stylesheet" href="css/user.css">
 </head>
-<body>          <div id="header">
+<body>               <div id="header">
         
         <div class="navbar">
 
@@ -14,20 +16,14 @@
             <div class="leftpart">
 
               <div class="logo">
-                <img src="images/logo2.png">
-                <h2>Tunibyan Jobs</h2>               
+                <a href="#"><img src="images/logo2.png"></a>
+                <h2><span class="red">Tuni</span><span class="green">byan</span> Jobs</h2>               
               </div>
 
               <div class="leftlist">
               <ul>
-                <li><a href="#partners">Partners</a></li>
-                <li><a href="#">All Jobs</a></li>
-                <li><a href="#">Testimonials</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
               </ul>
               </div>
-
             </div>
 
             <div class="rightpart">
@@ -36,57 +32,67 @@
               </ul>
             </div>
           </div>
-        </div>       
+        </div>
+               <div class="slider">
+                <div class="container">
+                   <div class="intro">
+                   </div>
+                </div>
+        </div>      
          <div class="content">
         <h2>Welcome!</h2>
-        <div id = "info-update-btn" class="btn">Update your profile</div>
+        <div id = "info-update-btn" class="btn" >Update your profile</div>
       </div>
+    </div>
       <!-- end of header -->
       <div class="user-page-content-container">
+        <div class="user-profile-container">
         <div class="user-information">
-          <div class= "user-logo-area">
             <img class= "user-logo" src = "https://www.childhood.org.au/app/uploads/2017/07/ACF-logo-placeholder.png">
-          </div>
-          <div class = "user-title-area">
-            <h2 class = "user-title">Our company</h2>
-          </div>
+            <h2 class = "user-title">Company Name</h2>
         </div>
+        <div class="inner-user-content">
         <div id=user-about-content>
           <h3 class="user-about-title">Who are we</h3>
           <p class="user-about">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
         </div>
         <div class = "services" >
           <h3 class="user-about-title">Our services</h3>
-          <ul class="services-list">
-            <li></li>
-          </ul>
+          <p class="user-services">
+            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo
+          </p>
         </div>
         <div id = "contact information">
-          <p class = "user-address">Adress</p>
-          <p class="user-phoneNumber">phone Number</p>   
+          <span class = "user-address">Adress:</span><span class="user-change-address">hey</span><br>
+          <span class="user-phoneNumber">Phone:</span><span class="user-change-phone">hey</span>
         </div>
+      </div>       
+       <div id = "post-job-btn"class = "btn">Post a new Job</div>
       </div>
+        <div id= "user-posted-jobs">
+        </div>
+    </div>
 
-        <div id= "user-posted-jobs" class="user-page-content">
-          
-        </div>
-      </div>
 
 <div class="info-form-container">
   <div class="user-info-form-title">Update Your Information</div>
   <div class="user-info-form">
     <div class="user-name-area">
-      <label class="user-input-label" for="user-name">Company</label>
+      <label class="user-input-label" for="user-name">Company Name</label>
       <input id = "user-name-input" name=user-name type="text" placeholder="Your company name"><br>
     </div>
-    
+    </div>
     <div class="user-logo-area">    
       <label class="user-input-label" for="file">Logo</label>
     <input id ="user-logo-input" type = "file" name = "file">
   </div>
   <div class="user-about-area">
      <label id = "about-label" class="user-input-label" for="about">About</label>
-    <textarea id ="user-about-input" rows="7" cols="50">Tell us more about your company, let people know what you do!</textarea> 
+    <textarea id ="user-about-input" rows="5" cols="50" placeholder="Tell us more about your company, let people know what you do!"></textarea> 
+  </div>
+    <div class="user-services-area">
+     <label id = "services-label" class="user-input-label" for="about">Your services</label>
+    <textarea id ="user-services-input" rows="5" cols="50" placeholder="Tell us more about your company, let people know what you do!"></textarea>
   </div>
   <div class="user-contact-info">
     <div class="user-address-area">    
@@ -99,11 +105,30 @@
   </div>
   </div>
     <div id="info-btn" class="btn">Submit</div>
-  <div>
+</div>
+        <div class="job-form-container">
+  <div class="user-job-post-title">Post a job</div>
+    <div class="user-name-area">
+      <label class="job-input-label" for="job-name">Job-Title</label>
+      <input id = "job-name-input" name=job-name type="text" placeholder="Job title"><br>
+    </div>
+  <div class="job-about-area">
+     <label id = "job-label" class="job-input-label" for="about">Job Description</label>
+    <textarea id ="job-about-input" rows="5" cols="50" placeholder="Enter Job description"></textarea> 
+  </div>
+      <div class="job-salary-area">    
+      <label class="job-input-label" for="salary">Salary</label>
+    <input id ="job-salary-input" type = "number" name = "salary">
+  </div>
+    <div id="job-btn" class="btn">Submit</div>
+</div> 
 <script type="text/javascript" src = "https://code.jquery.com/jquery-3.4.1.min.js"></script>
           <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
-<script type="text/javascript" src="js/jobs.js"></script>
 <script type="text/javascript" src = "js/popup-profile-update.js"></script>
+<script type="text/javascript" src ="js/user-interface.js"></script>
+<script type="text/javascript" src = "js/postjob.js"></script>
+<script type="text/javascript" src="js/jobs.js"></script>
+
 </body>
 </html>

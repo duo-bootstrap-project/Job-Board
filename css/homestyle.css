@@ -6,7 +6,9 @@
 }
 
 /*header start*/
-
+#black-content{
+    color:black;
+}
 #header .navbar
 {
     background-color: #252F31;
@@ -165,7 +167,7 @@
 
 #header .slider .container .intro
 {
-    padding-top:200px;
+    padding-top:350px;
     text-align: center;
     color: #FFF;
 }
@@ -322,31 +324,46 @@ input:focus {
 /*login signup end*/
 
 /*jobs area star*/
-#jobs{
-    text-align: left;
-    padding: 7px 15px;
-    margin: 20px 2px;
-}
-
-
-.job-titles{
-font-weight: bold;
-margin-left: 10px;
-margin-top: 80px;
-}
-
-.job-descriptions{
-    margin-left: 20px;
-    margin-top: 8px;
-}
-
-
-
-/*alljobs start*/
 
 #alljobs .container
 {
     text-align: center;
+    font-family: Alegreya;
+}
+
+#alljobs .searchbarcontainer
+{
+    margin: 30px 0;
+    overflow: hidden;
+}
+
+#alljobs .searchbarcontainer label
+{
+    float: left;
+    margin: 0 25px 0 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#alljobs .searchbarcontainer input
+{
+    float: left;
+    height: 27px;
+    width: 260px;
+    padding-left: 10px;
+    font-size: 17px;
+}
+
+#alljobs .searchbarcontainer button
+{
+    float: left;
+    margin-left: 10px;
+    padding: 7px 18px;
+    background-color: green;
+    color: #FFF;
+    border-radius: 7px;
+    font-weight: bold;
+    font-style: italic;
 }
 
 #alljobs #jobsarea
@@ -357,26 +374,61 @@ margin-top: 80px;
     border-right: 1px solid black;
     background-color: #F5F5F5;
     overflow: auto;
+    font-family: Alegreya;
 }
+
+#jobsarea .everyjobcontainer
+{
+    border: 2px solid black;
+    text-align: center;
+    overflow: auto;
+}
+
 
 #alljobs #jobsarea .job-titles
 {
-    font-size: 20px;
-    color: #D35400;
-    background-color: #F9E79F;
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
+    font-size: 34px;
+    font-weight: bold;
     margin: 0;
     padding: 2px 8px;
+    text-align: left;
+}
+
+#alljobs #jobsarea .job-salaries
+{
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+    border: 1px solid gray;
+    background-color: #e6ecff;
+    margin: 0;
+    padding: 10px 0;
 }
 
 #alljobs #jobsarea .job-descriptions
 {
-    font-size: 16px;
-    background-color: #FEF9E7 ;
+    font-size: 23px;
     margin: 0;
     padding: 10px 18px;
+    text-align: justify;
 }
+
+
+
+#alljobs #jobsarea .job-dates
+{
+    font-size: 16px;
+    font-style: italic;
+    padding: 7px 30px;
+    background-color: black;
+    color: white;
+    margin: 0;
+    border: 1px solid gray;
+    display: inline-block;
+    float: right;
+}
+
+
 /*alljobs end*/
 
 /*testimonials start*/
